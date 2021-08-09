@@ -5,7 +5,7 @@ body {
   font-family: 'Georama', sans-serif;
 }
 
-img {
+.people img {
   width: 150px;
   border-radius: 10px;
 }
@@ -18,10 +18,14 @@ img {
 
 header {
     background-color:#c3f5c9;
-    height: 80px;
+    height: 100px;
     padding: 30px;
 }
 
+.logo img {
+  width:150px;
+  height: 100px;
+}
 nav {
     font-family: 'Georama', sans-serif;
     font-family: 'ZCOOL XiaoWei', serif;
