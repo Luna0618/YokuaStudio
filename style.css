@@ -1,36 +1,35 @@
 @import url(https://fonts.googleapis.com/css2?family=Georama&family=ZCOOL+XiaoWei&display=swap);
 
-
 body {
-  font-family: 'Georama', sans-serif;
+  font-family: "Georama", sans-serif;
+  background-color: #e9fceb;
 }
 
 header {
-    background-color:#c3f5c9;
-    height: 100px;
-    display:flex;
-    justify-content: space-between;
-    box-shadow: 0px 1px 5px gray;
-    padding: 15px;
-    position: sticky;
-    top: 0px;
-    margin:-10px;
+  background-color: #c3f5c9;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 1px 5px gray;
+  padding: 15px;
+  position: sticky;
+  top: 0px;
+  margin: -10px;
 }
-
 
 .logo img {
   width: 120px;
   height: 100px;
 }
 
-nav ul{
-  margin-top: 15px; 
+nav ul {
+  margin-top: 15px;
   overflow: hidden;
 }
 
 nav ul li {
-  width:120px;
-  margin:30px;
+  width: 120px;
+  margin: 30px;
   font-size: 20px;
   background-color: #92ed9d;
   border-radius: 10px;
@@ -42,18 +41,18 @@ nav ul li {
 nav a {
   color: black;
   text-decoration: none;
-  text-transform:uppercase;
+  text-transform: uppercase;
 }
 
 nav a:hover {
-  color:white;
+  color: white;
 }
 
-.lang-switcher ul{
+.lang-switcher ul {
   margin-top: 25px;
 }
 
-.lang-switcher ul li{
+.lang-switcher ul li {
   background-color: #92ed9d;
   margin: 10px;
   border-radius: 5px;
@@ -62,36 +61,24 @@ nav a:hover {
 }
 
 .lang-switcher a {
-  color:black;
+  color: black;
   text-decoration: none;
 }
 
 .lang-switcher a:hover {
-  color:white;
+  color: white;
 }
 
 .content {
-  padding-top: 15px;
-  text-align: center;
-  background-color: #e9fceb;
-  margin: -10px;
+  animation: transition 0.5s;
 }
 
-.people img {
-  width: 150px;
-  border-radius: 10px;
-}
+@keyframes transition {
+  from {
+    opacity: 0;
+  }
 
-.people ul{
-  font-size: large;
-  display: flex;
-  list-style: none;
-}
-
-.people ul li {
-  margin: 20px;
-}
-
-.content p{
-  margin: 10px;
+  to {
+    opacity: 1;
+  }
 }
