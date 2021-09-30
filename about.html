@@ -22,24 +22,65 @@
                 <li> <a href="contact.html">Contact Us</a> </li>
             </ul>
         </nav>
+        <div class="lang">
+            <ul>
+                <li> <a href="#" lang ='en' class='active'>English</a></li>
+                <li> <a href="#" lang='chinese'>中文</a></li>
+            </ul>
+        </div>
     </header>
     <div class="content">
         <div class="people">
             <ul>
                 <li><img src="CEO.jpg" alt="Photo">
-                    <h1 id="name">Luna</h1>
-                    <p id="title">The only programmer</p>
+                    <h1 class="namePro">Luna</h1>
+                    <p class="titlePro">The only programmer</p>
                 </li>
                 <li>
                     <img src="Artist.jpg" alt="Photo">
-                    <h1 id="name">Yui</h1>
-                    <p id="title">The only artist</p>
+                    <h1 class="nameArt">Yui</h1>
+                    <p class="titleArt">The only artist</p>
                 </li>
             </ul>
         </div>
     </div>
-
 </body>
+
+<script>
+    const langs = document.querySelector('.lang');
+    const links = document.querySelectorAll('.lang a');
+    const namePro = document.querySelector('.namePro');
+    const nameArt = document.querySelector('.nameArt');
+    const titlePro = document.querySelector('.titlePro');
+    const titleArt = document.querySelector('.titleArt');
+
+    links.forEach(el => {      
+			el.addEventListener('click', ()=>{
+                langs.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+				const lang = el.getAttribute('lang');
+				namePro.childNodes[0].textContent = text[lang].namePro;
+                nameArt.childNodes[0].textContent = text[lang].nameArt;
+                titlePro.childNodes[0].textContent = text[lang].titlePro;
+                titleArt.childNodes[0].textContent = text[lang].titleArt;
+            });
+		});
+
+    var text = {
+        "en":{
+            "namePro": "Luna",
+            "nameArt": "Yui",
+            "titlePro": "The only programmer",
+            "titleArt": "The only artist"
+        },
+        "chinese": {
+            "namePro": "露娜",
+            "nameArt": "植草十年",
+            "titlePro": "唯一的程序员",
+            "titleArt": "唯一的画手"
+        }
+    }
+</script>
 
 <style>
     .content {

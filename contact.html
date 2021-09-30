@@ -20,16 +20,45 @@
                 <li> <a href="games.html">Games</a> </li>
                 <li> <a href="about.html">About Us</a> </li>
                 <li> <a href="contact.html">Contact Us</a> </li>
-            </ul>
+            </ul>          
         </nav>
+        <div class="lang">
+                <ul>
+                    <li> <a href="#" lang ='en' class='active'>English</a></li>
+                    <li> <a href="#" lang='chinese'>中文</a></li>
+                </ul>
+        </div>
     </header>
     <div class="content">
         <p>
             email: lunar990618@gmail.com
         </p>
     </div>
-
 </body>
+
+<script>
+    const langs = document.querySelector('.lang');
+    const links = document.querySelectorAll('.lang a');
+    const content = document.querySelector('.content');
+
+    links.forEach(el => {      
+			el.addEventListener('click', ()=>{
+                langs.querySelector('.active').classList.remove('active');
+				el.classList.add('active');
+				const lang = el.getAttribute('lang');
+				content.childNodes[1].textContent=text[lang].content;
+			});
+		});
+
+    var text = {
+        "en":{
+            "content": "email: lunar990618@gmail.com"
+        },
+        "chinese": {
+            "content": "微博：@祝诸葛猪哥哥"
+        }
+    }
+</script>
 
 <style>
     .content {
